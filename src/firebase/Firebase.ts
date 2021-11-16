@@ -3,12 +3,13 @@ import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCNx4cO3P0w4yJZ95IqYPdx8F7-jEm6Nss",
-    authDomain: "golden-glaze-pm.firebaseapp.com",
-    projectId: "golden-glaze-pm",
-    storageBucket: "golden-glaze-pm.appspot.com",
-    messagingSenderId: "1035652862564",
-    appId: "1:1035652862564:web:b98706c60e3363580a0571"
+    apiKey: "AIzaSyAPBpsBxMG5CHGPuAs-yQlTwcdN7jtqvQM",
+    authDomain: "root4judge-b3cf1.firebaseapp.com",
+    projectId: "root4judge-b3cf1",
+    storageBucket: "root4judge-b3cf1.appspot.com",
+    messagingSenderId: "1083800457393",
+    appId: "1:1083800457393:web:b4998fc693e2be58c01290",
+    measurementId: "G-3VJJJR6LJS"
 };
 
 
