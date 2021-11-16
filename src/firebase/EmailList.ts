@@ -1,6 +1,6 @@
 import db from './Firebase';
 import { EMAILS } from './Collections';
-import { collection, addDoc, deleteDoc, getDocs, where, query, DocumentReference, DocumentSnapshot } from '@firebase/firestore';
+import { collection, addDoc, deleteDoc, getDocs, where, query, DocumentReference, DocumentSnapshot, QuerySnapshot, DocumentData } from '@firebase/firestore';
 
 export function addEmailToList(fname: string, lname: string, email: string): Promise<DocumentReference> {
   //TODO possibly check for duplicate emails
@@ -17,10 +17,10 @@ export function addEmailToList(fname: string, lname: string, email: string): Pro
 export function removeEmailFromList(email: string): Promise<boolean> {
   //TODO if we prevent duplicates this function can be simplified
   return new Promise((resolve, reject) => {
-    getEmailDocumentSnapshots(email).then((docSnapshots) => {
+    getEmailQuerySnapshot(email).then((qs) => {
 
-      docSnapshots.forEach(docSnapshot => {
-        deleteDoc(docSnapshot.ref).catch(err => reject(err));
+      qs.forEach(doc => {
+        deleteDoc(doc.ref).catch(err => reject(err));
       });
 
       resolve(true);
@@ -33,9 +33,9 @@ export function getAllEmails(): Promise<Array<string>> {
   return new Promise<Array<string>>((resolve, reject) => {
     const emails = Array<string>();
 
-    getEmailDocumentSnapshots().then((docs) => {
+    getEmailQuerySnapshot().then((qs) => {
 
-      docs.forEach(doc => {
+      qs.forEach(doc => {
         const docData = doc.data() as EmailDocument
         emails.push(docData.email);
       });
@@ -51,23 +51,15 @@ function isValidEmail(email: string): boolean {
   return regexp.test(email);
 }
 
-function getEmailDocumentSnapshots(email?: string): Promise<Array<DocumentSnapshot>> {
-  return new Promise((resolve, reject) => {
-    const docs = Array<DocumentSnapshot>();
-    let q = null;
+// Get all email documents with specified email. If no email provided get all email documents 
+function getEmailQuerySnapshot(email?: string): Promise<QuerySnapshot<DocumentData>> {
+  let q = null;
 
-    if (email) {
-      q = query(collection(db, EMAILS), where('email', '==', email));
-    }
+  if (email) {
+    q = query(collection(db, EMAILS), where('email', '==', email));
+  }
 
-    getDocs(q ? q : collection(db, EMAILS)).then((qs) => {
-      qs.forEach(doc => {
-        docs.push(doc);
-      });
-    }).catch(err => reject(err));
-
-    resolve(docs);
-  });
+  return getDocs(q ? q : collection(db, EMAILS));
 }
 
 export type EmailDocument = {
