@@ -30,7 +30,6 @@ export function removeEmailFromList(email: string): Promise<boolean> {
 }
 
 export function getAllEmails(): Promise<Array<string>> {
-  //TODO implement getAllEmails function
   return new Promise<Array<string>>((resolve, reject) => {
     const emails = Array<string>();
 

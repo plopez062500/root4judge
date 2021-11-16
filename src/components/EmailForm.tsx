@@ -4,7 +4,7 @@ import {
   Input
 } from '@chakra-ui/react';
 
-type EmailFormData = {
+export type EmailFormData = {
   fname: string,
   lname: string,
   email: string,
