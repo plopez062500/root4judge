@@ -2,6 +2,7 @@ import { Box } from "@chakra-ui/react";
 import EmailForm, { EmailFormData } from "./components/EmailForm";
 import { addEmailToList, getAllEmails, removeEmailFromList } from './firebase/EmailList';
 import Navigation from './components/Navigation';
+import Home from './pages/Home'
 
 
 async function onSubmit(data: EmailFormData){
@@ -15,10 +16,8 @@ function App() {
   return (
     <div className="App">
       <Navigation />
-      <p>working</p>
-      <Box w='60%' mx='auto'>
-        <EmailForm onSubmit={onSubmit}/>
-      </Box>
+      
+      <Home/>
     </div>
   );
 }
