@@ -15,7 +15,7 @@ import Logo from './Icons/Logo';
 function Navigation() {
 
   return (
-    <Flex h='4.5em' maxH='4.5em' px='5em' alignItems='center' bg='white' boxShadow='lg'>
+    <Flex w='100%' h='4.5em' maxH='4.5em' px='5em' zIndex='10' alignItems='center' position='fixed' bg='white' boxShadow='lg'>
       <Box w='10em' minW='10em' cursor='pointer'>
         <Logo fill='#15316F'/>
       </Box>
@@ -23,7 +23,7 @@ function Navigation() {
       <Flex h='100%' ml='5em'>
         <NavItem>Home</NavItem>
         <NavItem>About Me</NavItem>
-        <NavItem>Events</NavItem>
+        <NavItem>Volunteer</NavItem>
         <NavItem>Donate</NavItem>
         <NavItem>Get In Touch</NavItem>
       </Flex>

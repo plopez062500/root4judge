@@ -39,7 +39,7 @@ function EmailForm(props: EmailFormProps) {
   }
 
   return (
-    <Flex w='100%' flexDirection='column' gridGap={5}>
+    <>
       <Flex gridGap={5}>
         <FormControl id="fname">
           <FormLabel>First Name</FormLabel>
@@ -63,8 +63,8 @@ function EmailForm(props: EmailFormProps) {
         <Textarea type="text" placeholder='Message' value={message} onChange={(e) => { setMessage(e.target.value) }} />
       </FormControl>
 
-      <Button size='lg' bg='primary.100' color='white' fontWeight='regular' _hover={{ bg: 'primary.200' }} isFullWidth my={4} onClick={submit}>Submit</Button>
-    </Flex>
+      <Button bg='primary.100' color='white' fontWeight='regular' _hover={{ bg: 'primary.200' }} isFullWidth my={4} onClick={submit}>Submit</Button>
+    </>
   )
 }
 
