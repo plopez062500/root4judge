@@ -43,24 +43,24 @@ function EmailForm(props: EmailFormProps) {
       <Flex gridGap={5}>
         <FormControl id="fname">
           <FormLabel>First Name</FormLabel>
-          <Input type="text" placeholder='First name' value={fname} onChange={(e) => { setFname(e.target.value) }} />
+          <Input name='fname' type="text" placeholder='First name' value={fname} onChange={(e) => { setFname(e.target.value) }} />
         </FormControl>
 
         <FormControl id="lname">
           <FormLabel>Last Name</FormLabel>
-          <Input type="text" placeholder='Last name' value={lname} onChange={(e) => { setLname(e.target.value) }} />
+          <Input name='lname' type="text" placeholder='Last name' value={lname} onChange={(e) => { setLname(e.target.value) }} />
         </FormControl>
       </Flex>
 
 
       <FormControl id="email">
         <FormLabel>Email Name</FormLabel>
-        <Input type="email" placeholder='Email' value={email} onChange={(e) => { setEmail(e.target.value) }} />
+        <Input name='email' type="email" placeholder='Email' value={email} onChange={(e) => { setEmail(e.target.value) }} />
       </FormControl>
 
       <FormControl id="message">
         <FormLabel>Message</FormLabel>
-        <Textarea type="text" placeholder='Message' value={message} onChange={(e) => { setMessage(e.target.value) }} />
+        <Textarea name='message' type="text" placeholder='Message' value={message} onChange={(e) => { setMessage(e.target.value) }} />
       </FormControl>
 
       <Button size='lg' bg='primary.100' color='white' fontWeight='regular' _hover={{ bg: 'primary.200' }} isFullWidth my={4} onClick={submit}>Submit</Button>

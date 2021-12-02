@@ -14,7 +14,7 @@ function Footer() {
 
 
   return (
-    <Flex justifyContent='center' alignItems='center' color='white' textAlign='center' w='100%' bg='primary.100' minH='14em'> {/** Footer Content Container */}
+    <Flex justifyContent='center' alignItems='center' flexDirection={{'sm': 'column', md: 'column', lg: 'row'}} gridGap={{lg: 0, md: 5, sm: 5}} py={{md: '3em', sm: '3em'}} color='white' textAlign='center' w='100%' bg='primary.100' minH='14em'> {/** Footer Content Container */}
 
       <Flex alignItems='center' gridGap={5}> {/** Footer content section */}
         <Flex justifyContent='center' alignItems='center' rounded='50%' bg='white' minW='3.5em' minH='3.5em'> { /** Icon Container */}
@@ -28,7 +28,7 @@ function Footer() {
 
       </Flex>
 
-      <Box minW='3px' minH='5em' mx='2em' bg='white' />
+      <Box minW={{lg: '3px', md: '19em', sm: '19em'}} minH={{lg: '5em', md: '2px', sm: '2px'}} mx='2em' bg='white' />
 
       <Flex alignItems='center' gridGap={5}> {/** Footer content section */}
         <Flex justifyContent='center' alignItems='center' rounded='50%' bg='white' minW='3.5em' minH='3.5em'> { /** Icon Container */}
@@ -38,7 +38,7 @@ function Footer() {
         <Text>root4judge@gmail.com</Text>
       </Flex>
 
-      <Box minW='3px' minH='5em' mx='2em' bg='white' />
+      <Box minW={{lg: '3px', md: '19em', sm: '19em'}} minH={{lg: '5em', md: '2px', sm: '2px'}} mx='2em' bg='white' />
 
       <Flex gridGap="1.2em" alignItems='center'>
         <Box w='2em' mr='0.1em' cursor='pointer'>
