@@ -26,8 +26,8 @@ function Footer() {
           </Flex>
 
           <Box minW='11.1em'>
-            <Text>P.O. Box 9975, 123 st,</Text>
-            <Text>Madisonville KY, 55555</Text>
+            <Text>117 West Center Street, P. O. Box 546</Text>
+            <Text>Madisonville, KY 42431</Text>
           </Box>
 
         </Flex>
