@@ -60,7 +60,7 @@ function Home() {
         <Box w='100%' h='100%' top='0' zIndex='0' bg='#2C4987' opacity='45%' ></Box>
 
 
-        <Box position='absolute' w='45%' minW='29em' mt={['13em', '15em', '15em']} textAlign='center' color='white' justifyContent='center' alignItems='center'>
+        <Box position='absolute' w='45%' minW='29em' mt={['9em', '15em', '15em']} textAlign='center' color='white' justifyContent='center' alignItems='center'>
           <SlideFade in={true} delay={.6}>
             <Box w={['80%', '100%', '100%']} mx={['auto']} color='white' textAlign='center'>
               <Logo fill='white' />
