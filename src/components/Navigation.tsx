@@ -38,7 +38,7 @@ function Navigation() {
   return (
     <Flex w='100%' h='4.5em' maxH='4.5em' px={['1.2em', '5em', '5em']} zIndex='10' alignItems='center' justifyContent='space-around' position='fixed' bg='white' boxShadow='lg'>
 
-      <Box w='3em' display={['inherit', 'none', 'none']} ref={btnRef} onClick={onOpen}>
+      <Box w='3em' position='absolute' left='5' display={['inherit', 'none', 'none']} ref={btnRef} onClick={onOpen}>
         <HamburgerIcon color='primary.100' display={['inherit', 'none', 'none']} w='3em' h='2em' />
       </Box>
 
