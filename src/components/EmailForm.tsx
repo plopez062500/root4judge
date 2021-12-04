@@ -17,11 +17,12 @@ export type EmailFormData = {
 
 interface EmailFormProps {
   onSubmit?: (data: EmailFormData) => void,
+  disabled?: boolean
 }
 
 function EmailForm(props: EmailFormProps) {
 
-  const { onSubmit } = props;
+  const { onSubmit, disabled } = props;
 
   const [fname, setFname] = useState('');
   const [lname, setLname] = useState('');
@@ -63,7 +64,7 @@ function EmailForm(props: EmailFormProps) {
         <Textarea name='message' type="text" placeholder='Message' value={message} onChange={(e) => { setMessage(e.target.value) }} />
       </FormControl>
 
-      <Button size='lg' bg='primary.100' color='white' fontWeight='regular' _hover={{ bg: 'primary.200' }} isFullWidth my={4} onClick={submit}>Submit</Button>
+      <Button disabled={disabled} size='lg' bg='primary.100' color='white' fontWeight='regular' _hover={{ bg: 'primary.200' }} isFullWidth my={4} onClick={submit}>Submit</Button>
     </Flex>
   )
 }

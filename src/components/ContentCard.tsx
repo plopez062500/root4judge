@@ -9,7 +9,7 @@ function ContentCard(props: PropsWithChildren<ContentCardProps>) {
   const { title, children } = props
 
   return (
-    <Box w='26em' h='25em' borderRadius='lg' boxShadow='2xl' p='3em'>
+    <Box w={['23em', '28em', '28em']} h='25em' borderRadius='lg' boxShadow='2xl' p='3em'>
       <Text fontSize='2xl' fontWeight='bold' color='primary.100'>{title}</Text>
       <Text mt='1em'>{children}</Text>
     </Box>

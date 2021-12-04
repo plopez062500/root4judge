@@ -1,6 +1,15 @@
 import db from './Firebase';
-import { EMAILS } from './Collections';
-import { collection, addDoc, deleteDoc, getDocs, where, query, DocumentReference, DocumentSnapshot, QuerySnapshot, DocumentData } from '@firebase/firestore';
+import { EMAILS, VOLUNTEERS } from './Collections';
+import { collection, addDoc, deleteDoc, getDocs, where, query, DocumentReference, QuerySnapshot, DocumentData } from '@firebase/firestore';
+
+export function addVolunteerToList(fname: string, lname: string, email: string, number: string){
+  return addDoc(collection(db, VOLUNTEERS), {
+    fname: fname,
+    lname: lname,
+    email: email,
+    number: number
+  });
+}
 
 export function addEmailToList(fname: string, lname: string, email: string): Promise<DocumentReference> {
   //TODO possibly check for duplicate emails

@@ -4,29 +4,29 @@ import {
   FormControl,
   FormLabel,
   Input,
-  Textarea,
   Button
 } from '@chakra-ui/react';
 
-export type EmailFormData = {
+export type VolunteerFormData = {
   fname: string,
   lname: string,
   email: string,
-  message: string
+  number: string
 }
 
-interface EmailFormProps {
-  onSubmit?: (data: EmailFormData) => void,
+interface VolunteerFormProps {
+  onSubmit?: (data: VolunteerFormData) => void,
+  disabled?: boolean
 }
 
-function EmailForm(props: EmailFormProps) {
+function VolunteerForm(props: VolunteerFormProps) {
 
-  const { onSubmit } = props;
+  const { onSubmit, disabled } = props;
 
   const [fname, setFname] = useState('');
   const [lname, setLname] = useState('');
   const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [number, setNumber] = useState('');
 
   function submit() {
     if (onSubmit)
@@ -34,13 +34,13 @@ function EmailForm(props: EmailFormProps) {
         fname: fname,
         lname: lname,
         email: email,
-        message: message
+        number: number
       });
   }
 
   return (
-    <>
-      <Flex gridGap={5}>
+    <Flex flexDirection='column' gridGap={5}>
+      <Flex gridGap={5} flexGrow='1'>
         <FormControl id="fname">
           <FormLabel>First Name</FormLabel>
           <Input type="text" placeholder='First name' value={fname} onChange={(e) => { setFname(e.target.value) }} />
@@ -58,14 +58,14 @@ function EmailForm(props: EmailFormProps) {
         <Input type="email" placeholder='Email' value={email} onChange={(e) => { setEmail(e.target.value) }} />
       </FormControl>
 
-      <FormControl id="message">
-        <FormLabel>Message</FormLabel>
-        <Textarea type="text" placeholder='Message' value={message} onChange={(e) => { setMessage(e.target.value) }} />
+      <FormControl id="number">
+        <FormLabel>Best Contact Number</FormLabel>
+        <Input type="text" placeholder='(xxx)xxx-xxxx' value={number} onChange={(e) => { setNumber(e.target.value) }} />
       </FormControl>
 
-      <Button bg='primary.100' color='white' fontWeight='regular' _hover={{ bg: 'primary.200' }} isFullWidth my={4} onClick={submit}>Submit</Button>
-    </>
+      <Button isDisabled={disabled} bg='primary.100' color='white' fontWeight='regular' _hover={{ bg: 'primary.200' }} isFullWidth my={4} onClick={submit}>Submit</Button>
+    </Flex>
   )
 }
 
-export default EmailForm
+export default VolunteerForm

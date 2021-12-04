@@ -19,7 +19,7 @@ function NavItem(props: PropsWithChildren<NavItemProps>) {
 
   return (
     <Flex 
-      h='100%' 
+      h={['3.2em', '100%', '100%' ]}
       px='0.8em' 
       color='primary.100' 
       alignItems='center'
