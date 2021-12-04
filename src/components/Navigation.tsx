@@ -36,7 +36,7 @@ function Navigation() {
 
 
   return (
-    <Flex w='100%' h='4.5em' maxH='4.5em' px={['1.2em', '5em', '5em']} zIndex='10' alignItems='center' justifyContent='space-around' position='fixed' bg='white' boxShadow='lg'>
+    <Flex w='100%' h='4.5em' maxH='4.5em' px={['1.2em', '5em', '5em']} zIndex='10' alignItems='center' justifyContent={['center', 'space-around', 'space-around']} position='fixed' bg='white' boxShadow='lg'>
 
       <Box w='3em' position='absolute' left='5' display={['inherit', 'none', 'none']} ref={btnRef} onClick={onOpen}>
         <HamburgerIcon color='primary.100' display={['inherit', 'none', 'none']} w='3em' h='2em' />
@@ -57,7 +57,7 @@ function Navigation() {
       </Drawer>
 
 
-      <Box w={['14em', '10em', '10em']} pr={['2em', '0', '0']} minW='10em' mx='auto' cursor='pointer' onClick={gotoHome}>
+      <Box w={['12em', '10em', '10em']} pr={['0em', '0', '0']} minW='10em' mx='auto' cursor='pointer' onClick={gotoHome}>
         <Logo fill='#15316F' />
       </Box>
 
