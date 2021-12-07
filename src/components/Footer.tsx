@@ -63,8 +63,8 @@ function Footer() {
         
       </Flex>
 
-      <Text fontSize='sm' pb={2} bg='primary.100' textAlign='center' color='white'>This site belongs to the rootforjudge committe</Text>
-      <Text fontSize='xs' pb={2} bg='primary.100' textAlign='center' color='white'>Designed and Devleped by Paul Lopez: plopez062500@gmail.com</Text>
+      <Text fontSize='sm' pb={2} bg='primary.100' textAlign='center' color='white'>This site belongs to the Root for Disctrict Judge Committee</Text>
+      <Text fontSize='xs' pb={2} bg='primary.100' textAlign='center' color='white'>Designed and Developed by Paul Lopez: plopez062500@gmail.com</Text>
 
     </Box>
 
