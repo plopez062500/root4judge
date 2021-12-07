@@ -115,7 +115,6 @@ function Home() {
         <EmailForm onSubmit={emailFormSubmitted} />
       </Box>
 
-      <Footer />
     </>
   )
 }

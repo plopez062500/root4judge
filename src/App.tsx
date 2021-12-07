@@ -6,6 +6,7 @@ import PageNotFound from "./pages/PageNotFound";
 import Donate from "./pages/Donate";
 import Volunteer from "./pages/Volunteer";
 
+import Footer from './components/Footer';
 
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
 
         <Route path='*' element={<PageNotFound/>}/>
       </Routes>
+
+      <Footer />
 
     </div>
   );

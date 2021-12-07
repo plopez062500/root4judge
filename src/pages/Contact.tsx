@@ -21,8 +21,8 @@ function Contact() {
 
     function successToast() {
       toast({
-        title: "You're all signed up!",
-        description: "We've added you to our list of volunteers. You should get an email shortly",
+        title: "We've received your message!",
+        description: "Your message was sent and has been received.",
         status: 'success',
         duration: 9000,
         isClosable: true,

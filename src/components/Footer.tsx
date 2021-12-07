@@ -17,8 +17,8 @@ function Footer() {
   }
 
   return (
-    <>
-      <Flex justifyContent='center' alignItems='center' flexDirection={['column', 'column', 'column', 'row']} gridGap={[5, 5, 5, 0]} py={{ md: '3em', sm: '3em' }} color='white' textAlign='center' w='100%' bg='primary.100' minH={['20em', '20em', '14em']}> {/** Footer Content Container */}
+    <Box w='100%' mt='auto' >
+      <Flex  justifyContent='center' alignItems='center' flexDirection={['column', 'column', 'column', 'row']} gridGap={[5, 5, 5, 0]} py={{ md: '3em', sm: '3em' }} color='white' textAlign='center' w='100%' bg='primary.100' minH={['20em', '20em', '14em']}> {/** Footer Content Container */}
 
         <Flex alignItems='center' gridGap={5}> {/** Footer content section */}
           <Flex justifyContent='center' alignItems='center' rounded='50%' bg='white' minW='3.5em' minH='3.5em'> { /** Icon Container */}
@@ -60,12 +60,13 @@ function Footer() {
         </Flex>
 
 
-
+        
       </Flex>
 
       <Text fontSize='sm' pb={2} bg='primary.100' textAlign='center' color='white'>This site belongs to the rootforjudge committe</Text>
+      <Text fontSize='xs' pb={2} bg='primary.100' textAlign='center' color='white'>Designed and Devleped by Paul Lopez: plopez062500@gmail.com</Text>
 
-    </>
+    </Box>
 
   )
 }
