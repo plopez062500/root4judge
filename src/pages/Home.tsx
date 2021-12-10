@@ -103,11 +103,11 @@ function Home() {
 
       </Flex>
 
-      <Flex mt='5em' w='100%' h='15em' alignItems='center' justifyContent='center' flexWrap='wrap' gridGap={14} textAlign='center'>
-        {/* {<YoutubeVideo title='placeholder' src='https://www.youtube.com/embed/ScMzIvxBSi4' />
-        <YoutubeVideo title='placeholder' src='https://www.youtube.com/embed/ScMzIvxBSi4' />
+      <Flex mt='8em' mb='8em' w='100%' h='15em' alignItems='center' justifyContent='center' flexWrap='wrap' gridGap={14} textAlign='center'>
+         <YoutubeVideo title='placeholder' src='https://www.youtube.com/embed/vJHT_OsPbEY' />
+        {/*<YoutubeVideo title='placeholder' src='https://www.youtube.com/embed/ScMzIvxBSi4' />
         <YoutubeVideo title='placeholder' src='https://www.youtube.com/embed/ScMzIvxBSi4' />} */}
-        <Text> No media content available right now. </Text>
+        {/* <Text> No media content available right now. </Text> */}
       </Flex>
 
       <Box p={['1.1em', '5em', '5em']} w={{ lg: '70%', md: '70%', sm: '98%' }} mx='auto' textAlign='center'>
