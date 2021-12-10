@@ -55,12 +55,12 @@ function Home() {
 
   return (
     <>
-      <Flex minW='100%' h='90vh' justifyContent='center' alignItems='center' backgroundImage={LandingPhoto} backgroundPosition='center' backgroundSize='cover'> {/** Landing  */}
+      <Flex minW='100%' h='90vh'  justifyContent='center' alignItems='center' backgroundImage={LandingPhoto} backgroundPosition='50% 25%' backgroundSize='cover'> {/** Landing  */}
 
         <Box w='100%' h='100%' top='0' zIndex='0' bg='#2C4987' opacity='45%' ></Box>
 
 
-        <Box position='absolute' w='45%' minW='29em' mt={['12em', '15em', '15em']} textAlign='center' color='white' justifyContent='center' alignItems='center'>
+        <Box position='absolute' w='45%' minW='29em' mt={['12em', '15em', '25em']} textAlign='center' color='white' justifyContent='center' alignItems='center'>
           <SlideFade in={true} delay={.6}>
             <Box w={['80%', '100%', '100%']} mx={['auto']} color='white' textAlign='center'>
               <Logo fill='white' />
