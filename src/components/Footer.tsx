@@ -16,6 +16,10 @@ function Footer() {
     window.open('https://www.facebook.com/groups/2117446001737865', "_blank")
   }
 
+  function gotoYT() {
+    window.open('https://www.youtube.com/channel/UC7bKeehRSQo4VncjBb-AfOg', "_blank")
+  }
+
   return (
     <Box w='100%' mt='auto' >
       <Flex  justifyContent='center' alignItems='center' flexDirection={['column', 'column', 'column', 'row']} gridGap={[5, 5, 5, 0]} py={{ md: '3em', sm: '3em' }} color='white' textAlign='center' w='100%' bg='primary.100' minH={['20em', '20em', '14em']}> {/** Footer Content Container */}
@@ -48,7 +52,7 @@ function Footer() {
           <Box w='2em' mr='0.1em' cursor='pointer' onClick={gotoFB}>
             <FB fill='white' />
           </Box>
-          <Box w='2.4em' cursor='pointer'>
+          <Box w='2.4em' cursor='pointer' onClick={gotoYT}>
             <YT fill='white' />
           </Box>
           <Box w='2.4em' cursor='pointer'>
