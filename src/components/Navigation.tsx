@@ -34,6 +34,10 @@ function Navigation() {
     window.open('https://www.facebook.com/groups/2117446001737865', "_blank")
   }
 
+  function gotoYT() {
+    window.open('https://www.youtube.com/channel/UC7bKeehRSQo4VncjBb-AfOg', "_blank")
+  }
+
 
   return (
     <Flex w='100%' h='4.5em' maxH='4.5em' px={['1.2em', '5em', '5em']} zIndex='10' alignItems='center' justifyContent={['center', 'space-around', 'space-around']} position='fixed' bg='white' boxShadow='lg'>
@@ -77,7 +81,7 @@ function Navigation() {
           <Box w='1.6em' mr='0.1em' cursor='pointer' onClick={gotoFB}>
             <FB fill='#15316F' />
           </Box>
-          <Box w='2em' cursor='pointer'>
+          <Box w='2em' cursor='pointer' onClick={gotoYT}>
             <YT fill='#15316F' />
           </Box>
           <Box w='2em' cursor='pointer'>
