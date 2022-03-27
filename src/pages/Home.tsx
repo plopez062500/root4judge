@@ -55,7 +55,7 @@ function Home() {
 
   return (
     <>
-      <Flex minW='100%' h='90vh'  justifyContent='center' alignItems='center' backgroundImage={LandingPhoto} backgroundPosition='50% 25%' backgroundSize='cover'> {/** Landing  */}
+      <Flex minW='100%' h='90vh' justifyContent='center' alignItems='center' backgroundImage={LandingPhoto} backgroundPosition='50% 25%' backgroundSize='cover'> {/** Landing  */}
 
         <Box w='100%' h='100%' top='0' zIndex='0' bg='#2C4987' opacity='45%' ></Box>
 
@@ -103,11 +103,9 @@ function Home() {
 
       </Flex>
 
-      <Flex mt='8em' mb='8em' w='100%' h='15em' alignItems='center' justifyContent='center' flexWrap='wrap' gridGap={14} textAlign='center'>
+      <Flex mt='8em' mb='8em' w='100%' minH='15em' alignItems='center' justifyContent='center' flexWrap='wrap' gridGap={14} textAlign='center'>
          <YoutubeVideo title='placeholder' src='https://www.youtube.com/embed/vJHT_OsPbEY' />
-        {/*<YoutubeVideo title='placeholder' src='https://www.youtube.com/embed/ScMzIvxBSi4' />
-        <YoutubeVideo title='placeholder' src='https://www.youtube.com/embed/ScMzIvxBSi4' />} */}
-        {/* <Text> No media content available right now. </Text> */}
+         <YoutubeVideo title='placeholder' src='https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F107189648536163%2Fvideos%2F703686127706934%2F&show_text=false&width=560&t=0' />
       </Flex>
 
       <Box p={['1.1em', '5em', '5em']} w={{ lg: '70%', md: '70%', sm: '98%' }} mx='auto' textAlign='center'>
